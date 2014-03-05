@@ -73,6 +73,7 @@ include_once "../php/bases.php";
                     <button type="submit" class="btn blue">Connexion</button>
                 </form>
                 <div class="bottom-link">
+                    <!-- TODO[Nicolas] mot de passe oublié -->
                     <a href="">Mot de passe oublié ?</a>
                 </div>
             </div>
