@@ -5,3 +5,6 @@
 /.bowerrc
 /bower.json
 /config.rb
+/fonts/
+/scss/
+/css/font-awesome.min.css
