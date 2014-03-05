@@ -1,1 +1,7 @@
 /.idea/
+/.sass-cache/
+/scss/
+/js/vendor/
+/.bowerrc
+/bower.json
+/config.rb
