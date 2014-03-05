@@ -24,7 +24,7 @@ include_once "../php/bases.php";
 
     <link rel="stylesheet" href="../css/admin.css"/>
 </head>
-<body>
+<body class="login-page">
 <script>
     if (!document.all) {
         document.body.className += " gt-ie10";
@@ -45,19 +45,55 @@ include_once "../php/bases.php";
     <div class="row">
         <div class="col col-3"></div>
         <div class="col col-6">
-            <form action="process_login.php" method="post">
+            <div class="login-form">
+                <form action="process_login.php" method="post" class="form">
 
-                <label for="username">Nom d'utilisateur ou email</label>
-                <input type="text" id="username" name="login_form[username]"/>
+                    <label for="username">Nom d'utilisateur ou email</label>
+                    <input type="text" id="username" name="login_form[username]"/>
 
-                <label for="password">Mot de passe</label>
-                <input type="login_form[password]" name="password" id="password"/>
+                    <label for="password">Mot de passe</label>
+                    <input type="password" name="login_form[password]" id="password"/>
 
-                <button type="submit">Connexion</button>
-            </form>
+                    <div class="custom-field">
+                        <span >Se souvenir de moi ?</span>
+                        <div class="switcher">
+                            <input type="checkbox" id="cswitcher" class=".switcher-checkbox"/>
+                            <label for="cswitcher" class="switcher-label">
+                                <div class="switcher-btn"></div>
+                                <div class="switcher-labels"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn blue" onclick="return false;">Connexion</button>
+                </form>
+                <div class="bottom-link">
+                    <a href="">Mot de passe oublié ?</a>
+                </div>
+
+            </div>
+
         </div>
         <div class="col col-3"></div>
     </div>
 </div>
+<script src="../js/vendor/jquery-1.11.0.min.js"></script>
+<script>
+    $(function(){
+        var $loginForm = $(".login-form");
+        $loginForm.css("position", "absolute");
+        var $w = $(window);
+        function position(){
+            var W = $w.width();
+            var H = $w.height();
+            var w = $loginForm.width();
+            var h = $loginForm.height();
+            $loginForm.css("top", ((H/2)-h)+"px").css("left", ((W-w)/2)+"px");
+        }
+        position();
+        $w.on("resize", function(){
+            position();
+        });
+    });
+</script>
 </body>
 </html>
