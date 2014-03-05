@@ -5,8 +5,17 @@
  * Date: 05/03/14
  * Time: 05:33
  */
-include_once "";
+include_once "../php/bases.php";
 ?>
+
+
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
 <div class="container">
     <div class="row">
         <div class="col col-3">
@@ -17,3 +26,5 @@ include_once "";
         </div>
     </div>
 </div>
+</body>
+</html>
