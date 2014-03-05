@@ -1,0 +1,23 @@
+@import "compass";
+@import "normalize";
+@import "mixins";
+@import "grid";
+@import "typo";
+
+// ie < 10
+body{
+  background-color: #fff;
+  &.lt-ie9, &.ie9{
+    .browserhappy{
+      display: block;
+    }
+  }
+}
+
+.browserhappy{
+  display: none;
+}
+
+
+
+

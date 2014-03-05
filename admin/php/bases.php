@@ -7,6 +7,7 @@
  */
 
 defined("DS")           || define("DS", DIRECTORY_SEPARATOR);
+defined("ROOT")         || define("ROOT", realpath(dirname(dirname(__DIR__))));
 defined("ADMIN_ROOT")   || define("ADMIN_ROOT", realpath(dirname(__DIR__)));
 defined("CLASS_DIR")    || define("CLASS_DIR", ADMIN_ROOT . DS . "php" . DS . "classes");
 

@@ -3,18 +3,11 @@
  * Created by PhpStorm.
  * User: Nicolas
  * Date: 05/03/14
- * Time: 05:33
+ * Time: 15:54
  */
 include_once "../php/bases.php";
 
-if(!$session->exists("user")){
-    $session->set("url", $_SERVER["REQUEST_URI"]);
-    header("Location: /admin/login/login.php");
-    die();
-}
 ?>
-
-
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="fr"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="fr"> <![endif]-->
@@ -50,11 +43,20 @@ if(!$session->exists("user")){
 </p>
 <div class="container">
     <div class="row">
-        <div class="col col-3">
+        <div class="col col-3"></div>
+        <div class="col col-6">
+            <form action="process_login.php" method="post">
 
+                <label for="username">Nom d'utilisateur ou email</label>
+                <input type="text" id="username" name="login_form[username]"/>
+
+                <label for="password">Mot de passe</label>
+                <input type="login_form[password]" name="password" id="password"/>
+
+                <button type="submit">Connexion</button>
+            </form>
         </div>
-        <div class="col col-9">
-        </div>
+        <div class="col col-3"></div>
     </div>
 </div>
 </body>

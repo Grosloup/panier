@@ -14,11 +14,3 @@ function autoload($classname=""){
 
     require_once $filename;
 }
-
-function getHeader(){
-
-}
-
-function getFooter(){
-
-}
