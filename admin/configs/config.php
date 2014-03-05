@@ -36,9 +36,11 @@ $container["db"] = function($c){
 };
 
 // session
-$container["session_opts"]= [
-    "session_class" => "Session",
-    "flash_name"    => "flash",
+$container["session_opts"] = [
+    "session_class"     => "Session",
+    "flash_name"        => "flash",
+    "csrf_salt"         => "WTodzfag9nuOXSyaisE6Ernlw8qx",
+    "csrf_token_name"   => "_token_",
 ];
 
 $container["session"] = function($c){

@@ -7,6 +7,9 @@
  */
 include_once "../php/bases.php";
 
+// il y a t il un cookie ?
+    // oui -> recup user ->mis en session
+
 if(!$session->exists("user")){
     $session->set("url", $_SERVER["REQUEST_URI"]);
     header("Location: /admin/login/login.php");

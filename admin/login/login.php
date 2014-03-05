@@ -6,7 +6,6 @@
  * Time: 15:54
  */
 include_once "../php/bases.php";
-
 ?>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="fr"> <![endif]-->
@@ -22,6 +21,7 @@ include_once "../php/bases.php";
 
     <script src="../js/vendor/modernizr.min.js"></script>
 
+    <link rel="stylesheet" href="../../css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../css/admin.css"/>
 </head>
 <body class="login-page">
@@ -46,6 +46,11 @@ include_once "../php/bases.php";
         <div class="col col-3"></div>
         <div class="col col-6">
             <div class="login-form">
+                <?php $message = $session->getFlashMessage(); if($message): ?>
+                <div class="message warn">
+                    <i class="fa fa-exclamation-circle"></i> <?php echo $message; ?>
+                </div>
+                <?php endif; ?>
                 <form action="process_login.php" method="post" class="form">
 
                     <label for="username">Nom d'utilisateur ou email</label>
@@ -57,19 +62,19 @@ include_once "../php/bases.php";
                     <div class="custom-field">
                         <span >Se souvenir de moi ?</span>
                         <div class="switcher">
-                            <input type="checkbox" id="cswitcher" class=".switcher-checkbox" ng-animate="login_form[remember]"/>
+                            <input type="checkbox" id="cswitcher" class=".switcher-checkbox" name="login_form[remember]"/>
                             <label for="cswitcher" class="switcher-label">
                                 <div class="switcher-btn"></div>
                                 <div class="switcher-labels"></div>
                             </label>
                         </div>
                     </div>
-                    <button type="submit" class="btn blue" onclick="return false;">Connexion</button>
+                    <input name="<?php echo $session->getTokenName() ;?>" type="hidden" value="<?php echo $session->generateFormCsrfToken() ;?>"/>
+                    <button type="submit" class="btn blue">Connexion</button>
                 </form>
                 <div class="bottom-link">
                     <a href="">Mot de passe oublié ?</a>
                 </div>
-
             </div>
 
         </div>

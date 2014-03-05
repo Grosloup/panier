@@ -24,6 +24,9 @@ class Session {
             $params['lifetime'], $params['path'], $params['domain'], $params['secure'], true
         );
         session_start();
+        if(!$this->exists("token_name")){
+            $this->set("token_name", $this->configs["csrf_token_name"]);
+        }
 
         $this->regenerate();
     }
@@ -33,21 +36,26 @@ class Session {
         session_regenerate_id();
     }
 
-/*    public static function generateFormCsrfToken()
+    public function generateFormCsrfToken()
     {
         $token = md5(time() . uniqid());
-        $sessionToken = md5($token . self::$configs["security"]["csrf"]["salt"]);
-        self::set("token_name", self::$configs["security"]["csrf"]["token_name"]);
-        self::set(self::$configs["security"]["csrf"]["token_name"], $sessionToken);
+        $sessionToken = md5($token . $this->configs["csrf_salt"]);
+
+        $this->set($this->get("token_name"), $sessionToken);
         return $token;
     }
 
-    public static function validateFormCsrfToken($token = "")
+    public function validateFormCsrfToken($token = "")
     {
-        $left = md5($token . self::$configs["security"]["csrf"]["salt"]);
-        $right = self::get(self::$configs["security"]["csrf"]["token_name"], true);
+        $left = md5($token . $this->configs["csrf_salt"]);
+        $right = $this->get($this->configs["csrf_token_name"], true);
         return $left === $right;
-    }*/
+    }
+
+    public function getTokenName()
+    {
+        return $this->get("token_name");
+    }
 
     public function set($key, $value)
     {
@@ -64,6 +72,13 @@ class Session {
             }
         }
         return $value;
+    }
+
+    public function delete($key)
+    {
+        if($this->exists($key)){
+            unset($_SESSION[$key]);
+        }
     }
 
     public function setFlashMessage($message = "")
