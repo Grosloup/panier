@@ -57,7 +57,7 @@ include_once "../php/bases.php";
                     <div class="custom-field">
                         <span >Se souvenir de moi ?</span>
                         <div class="switcher">
-                            <input type="checkbox" id="cswitcher" class=".switcher-checkbox"/>
+                            <input type="checkbox" id="cswitcher" class=".switcher-checkbox" ng-animate="login_form[remember]"/>
                             <label for="cswitcher" class="switcher-label">
                                 <div class="switcher-btn"></div>
                                 <div class="switcher-labels"></div>
