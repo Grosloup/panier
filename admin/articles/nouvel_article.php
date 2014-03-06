@@ -52,10 +52,8 @@ if(!$session->exists("user")){
 <p class="browserhappy">
     Vous utilisez une version d'internet explorer incompatible avec ce site. Mettez à jour internet explorer vers la version 11, ou utilisez des navigateurs tels que Google Chrome, Firefox,...
 </p>
-<?php include_once "../common/side_bar.php"; ?>
-<div id="top-bar">
-
-</div>
+<?php include_once "../common/side-bar.php"; ?>
+<?php include_once "../common/top-bar.php"; ?>
 
 <div id="page">
 

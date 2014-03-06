@@ -6,6 +6,7 @@
  * Time: 13:43
  */
 return [
+    "home" => "/",
     "admin_home" => "/admin/index.php",
     "nouvel_article"=> "/admin/articles/nouvel_article.php",
 ];

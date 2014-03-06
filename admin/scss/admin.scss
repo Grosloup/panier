@@ -236,6 +236,48 @@ $topbarZindex: 1000;
   background-color: $topbarBgColor;
   z-index: $topbarZindex;
   @include box-shadow(rgba(0,0,0,0.15) 0 5px 3px);
+  line-height: $topbarHeight;
+  color: #fff;
+  @include clearfix;
+  a{
+    text-decoration: none;
+    outline: none;
+  }
+  .title{
+    min-width: $leftNavWidth;
+    height: 100%;
+    float: left;
+    a{
+      display: block;
+      text-align: center;
+      padding: 0 5px;
+      color: inherit;
+      &:hover{
+        background-color: lighten($topbarBgColor, 5%);
+      }
+    }
+  }
+  .navs{
+    float: left;
+    @include clearfix;
+    .nav{
+      float: left;
+      ul{
+        @include clearfix;
+        li{
+          float: left;
+          a{
+            display: block;
+            color: inherit;
+            padding: 0 5px;
+            &:hover{
+              background-color: lighten($topbarBgColor, 5%);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /*
@@ -245,7 +287,8 @@ $topbarZindex: 1000;
   regles attachées à la page admin index.php
 */
 .admin-home{
-  background-color: #375c66;
+  // background-color: #375c66;
+  background-color: #c4d9e0;
   height: 100%;
   padding: 0 0 0 250px;
 
@@ -259,7 +302,8 @@ $topbarZindex: 1000;
   regles attachées à la page nouvel_article.php
 */
 .new-item{
-  background-color: #375c66;
+  // background-color: #375c66;
+  background-color: #c4d9e0;
   position: relative;
   height: 100%;
   margin: 0 0 0 250px;

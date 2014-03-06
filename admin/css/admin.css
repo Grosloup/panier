@@ -156,19 +156,35 @@ form.form input[type="text"], form.form input[type="password"] { width: 100%; pa
 
 /* topbar
 */
-#top-bar { height: 50px; position: fixed; top: 0; left: 0; right: 0; width: 100%; background-color: #323232; z-index: 1000; -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 5px 3px; -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 5px 3px; box-shadow: rgba(0, 0, 0, 0.15) 0 5px 3px; }
+#top-bar { height: 50px; position: fixed; top: 0; left: 0; right: 0; width: 100%; background-color: #323232; z-index: 1000; -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 5px 3px; -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 5px 3px; box-shadow: rgba(0, 0, 0, 0.15) 0 5px 3px; line-height: 50px; color: #fff; *zoom: 1; }
+#top-bar:before, #top-bar:after { content: " "; display: table; }
+#top-bar:after { clear: both; }
+#top-bar a { text-decoration: none; outline: none; }
+#top-bar .title { min-width: 250px; height: 100%; float: left; }
+#top-bar .title a { display: block; text-align: center; padding: 0 5px; color: inherit; }
+#top-bar .title a:hover { background-color: #3f3f3f; }
+#top-bar .navs { float: left; *zoom: 1; }
+#top-bar .navs:before, #top-bar .navs:after { content: " "; display: table; }
+#top-bar .navs:after { clear: both; }
+#top-bar .navs .nav { float: left; }
+#top-bar .navs .nav ul { *zoom: 1; }
+#top-bar .navs .nav ul:before, #top-bar .navs .nav ul:after { content: " "; display: table; }
+#top-bar .navs .nav ul:after { clear: both; }
+#top-bar .navs .nav ul li { float: left; }
+#top-bar .navs .nav ul li a { display: block; color: inherit; padding: 0 5px; }
+#top-bar .navs .nav ul li a:hover { background-color: #3f3f3f; }
 
 /* fin topbar
 */
 /* regles attachées à la page admin index.php
 */
-.admin-home { background-color: #375c66; height: 100%; padding: 0 0 0 250px; }
+.admin-home { background-color: #c4d9e0; height: 100%; padding: 0 0 0 250px; }
 
 /* fin regles attachées à la page admin index.php
 */
 /* regles attachées à la page nouvel_article.php
 */
-.new-item { background-color: #375c66; position: relative; height: 100%; margin: 0 0 0 250px; }
+.new-item { background-color: #c4d9e0; position: relative; height: 100%; margin: 0 0 0 250px; }
 
 /* fin regles attachées à la page nouvel_article.php
 */
