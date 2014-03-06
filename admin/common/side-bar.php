@@ -17,6 +17,7 @@
                 <li><i class="fa fa-search"></i> Rechercher</li>
                 <li><i class="fa fa-signal"></i> Statistiques</li>
                 <li><i class="fa fa-tags"></i> Types d'article</li>
+                <li><i class="fa fa-archive"></i> Stocks</li>
             </ul>
         </li>
         <li>
