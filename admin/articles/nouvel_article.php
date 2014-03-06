@@ -64,10 +64,10 @@ if(!$session->exists("user")){
             <div class="col col-9">
                 <form class="form" action="" method="post">
 
-                    <label for="designation">Désignation/nom de l'article</label>
+                    <label for="designation">Désignation/nom de l'article*</label>
                     <input type="text" name="new_item_form[designation]" id="designation"/>
 
-                    <label for="reference">Référence</label>
+                    <label for="reference">Référence*</label>
                     <input type="text" name="new_item_form[reference]" id="reference"/>
 
                     <label for="desription">Description</label>
@@ -79,7 +79,7 @@ if(!$session->exists("user")){
                             <input type="text" name="new_item_form[stock]" id="stock"/>
                         </div>
                         <div class="col col-6">
-                            <label for="prix">Prix de vente hors taxe</label>
+                            <label for="prix">Prix de vente hors taxe*</label>
                             <input type="text" name="new_item_form[prix]" id="prix"/>
                         </div>
                     </div>
@@ -95,9 +95,12 @@ if(!$session->exists("user")){
                         </div>
                     </div>
 
+
                     <!-- TODO[Nicolas] media associé -->
 
                     <button class="btn simple-blue">Enregister</button>
+
+                    <p>(*) Champs obligatoires</p>
                 </form>
             </div>
             <div class="col col-3">
