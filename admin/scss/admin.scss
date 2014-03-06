@@ -75,7 +75,7 @@ form.form{
     display: block;
     margin-bottom: 1px;
   }
-  input[type="text"], input[type="password"], textarea{
+  input[type="text"], input[type="password"], textarea, select{
     width: 100%;
     padding: 4px 8px;
     border: 1px solid #bababa;
@@ -85,6 +85,9 @@ form.form{
       outline: none;
       @include box-shadow(rgba(#5dbdff, 0.7) 0 0 10px inset);
     }
+  }
+  select{
+    padding: 3px 8px;
   }
   textarea{
     height: 200px;

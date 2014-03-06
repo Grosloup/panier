@@ -84,6 +84,17 @@ if(!$session->exists("user")){
                         </div>
                     </div>
 
+                    <div class="row">
+                        <div class="col col-6">
+                            <label for="category">Type de l'article</label>
+                            <select name="new_item_form[item_categories_id]" id="category"></select>
+                        </div>
+                        <div class="col col-6">
+                            <label for="new_category">Ou créer un nouveau type</label>
+                            <input type="text" name="new_item_form[new_category]" id="new_category"/>
+                        </div>
+                    </div>
+
                     <!-- TODO[Nicolas] media associé -->
 
                     <button class="btn simple-blue">Enregister</button>
