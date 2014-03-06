@@ -14,6 +14,7 @@
                 <li><a href="<?php echo $router->getRoute("nouvel_article"); ?>">Ajouter</a></li>
                 <li>Supprimer</li>
                 <li>Rechercher</li>
+                <li>Statistiques</li>
             </ul>
         </li>
         <li>
@@ -32,5 +33,6 @@
                 <li>Rechercher</li>
             </ul>
         </li>
+
     </ul>
 </div>

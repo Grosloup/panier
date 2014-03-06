@@ -46,6 +46,10 @@ body{
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
+  &.simple-blue{
+    background-color: #53a3ff;
+    color: #fff;
+  }
   &.blue{
     background-color: #53a3ff;
     color: #fff;
@@ -71,12 +75,20 @@ form.form{
     display: block;
     margin-bottom: 1px;
   }
-  input[type="text"], input[type="password"]{
+  input[type="text"], input[type="password"], textarea{
     width: 100%;
     padding: 4px 8px;
-    border: 1px solid #999;
+    border: 1px solid #bababa;
     @include border-radius(4px);
     margin-bottom: 10px;
+    &:focus{
+      outline: none;
+      @include box-shadow(rgba(#5dbdff, 0.7) 0 0 10px inset);
+    }
+  }
+  textarea{
+    height: 200px;
+    resize: vertical;
   }
 }
 
