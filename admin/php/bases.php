@@ -21,6 +21,11 @@ spl_autoload_register("autoload");
 
 include_once ADMIN_ROOT . DS ."configs" . DS . "config.php";
 
+$routes = include_once ADMIN_ROOT . DS ."configs" . DS . "routes.php";
+/** @var Router $router */
+$router = $container["router"];
+$router->setRoutes($routes);
+
 /** @var Session $session */
 $session = $container["session"];
 $session->start();

@@ -54,7 +54,7 @@ if(!$session->exists("user")){
 </p>
 <?php include_once "../common/side_bar.php"; ?>
 <div id="top-bar">
-    nanana
+
 </div>
 
 <div id="page">

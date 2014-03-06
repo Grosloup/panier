@@ -46,3 +46,12 @@ $container["session_opts"] = [
 $container["session"] = function($c){
     return new $c["session_opts"]["session_class"]($c["session_opts"]);
 };
+$container["router_opts"] = [
+    "router_class" => "Router",
+    "routes" => [],
+];
+
+// router
+$container["router"] = function($c){
+    return new $c["router_opts"]["router_class"]();
+};

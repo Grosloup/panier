@@ -1,0 +1,11 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Nicolas
+ * Date: 06/03/14
+ * Time: 13:43
+ */
+return [
+    "admin_home" => "/admin/index.php",
+    "nouvel_article"=> "/admin/articles/nouvel_article.php",
+];

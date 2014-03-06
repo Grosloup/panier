@@ -11,7 +11,7 @@
         <li>
             <h5 class="titre">Gestion des Articles<span><i class="fa fa-chevron-circle-down"></i></span></h5>
             <ul>
-                <li><a href="/admin/articles/nouvel_article.php">Ajouter</a></li>
+                <li><a href="<?php echo $router->getRoute("nouvel_article"); ?>">Ajouter</a></li>
                 <li>Supprimer</li>
                 <li>Rechercher</li>
             </ul>
