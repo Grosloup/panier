@@ -14,7 +14,3 @@ function autoload($classname=""){
 
     require_once $filename;
 }
-
-function test($file){
-    echo  $file;
-}

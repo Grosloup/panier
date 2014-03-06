@@ -32,8 +32,8 @@ if(!$session->exists("user")){
 
     <script src="./js/vendor/modernizr.min.js"></script>
 
-    <link rel="stylesheet" href="../css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="./css/admin.css"/>
+    <link rel="stylesheet" href="/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/admin/css/admin.css"/>
 </head>
 <body class="admin-home">
 <script>
@@ -57,13 +57,16 @@ if(!$session->exists("user")){
     <div class="row">
         <div class="col col-3">
             <a href="/admin/login/logout.php">logout</a>
+
         </div>
         <div class="col col-9">
+
+
         </div>
     </div>
 </div>
-<script src="./js/vendor/jquery-1.11.0.min.js"></script>
-<script src="./js/jquery-plugins/menu-accordeon.js"></script>
+<script src="/admin/js/vendor/jquery-1.11.0.min.js"></script>
+<script src="/admin/js/jquery-plugins/menu-accordeon.js"></script>
 <script>
     $(".menu-accordeon").menuAccordeon();
 </script>

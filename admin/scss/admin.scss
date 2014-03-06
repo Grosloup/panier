@@ -188,6 +188,18 @@ form.form{
   fin css pour login.php /////////////////////////////////
 */
 
+////////////////////////////////////////////////////////////
+
+$leftNavWidth: 250px;
+$leftNavBgColor: #323232;
+$leftNavZindex: 500;
+
+$topbarHeight: 50px;
+$topbarBgColor: #323232;
+$topbarZindex: 1000;
+
+////////////////////////////////////////////////////////////
+
 /*
   navigation side bar commune en admin
 */
@@ -195,16 +207,39 @@ form.form{
   height: 100%;
   position: fixed;
   overflow: hidden;
-  width: 240px;
+  width: $leftNavWidth;
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: #323232;
-  @include box-shadow(rgba(0,0,0,0.15) 5px 0 3px);
+  background-color: $leftNavBgColor;
+  padding-top: $topbarHeight;
+  z-index: $leftNavZindex;
 }
 
 /*
-  navigation side bar commune en admin
+  fin navigation side bar commune en admin
+*/
+#page{
+  position: relative;
+  padding-top: $topbarHeight + 10;
+}
+/*
+  topbar
+*/
+#top-bar{
+  height: $topbarHeight;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: $topbarBgColor;
+  z-index: $topbarZindex;
+  @include box-shadow(rgba(0,0,0,0.15) 0 5px 3px);
+}
+
+/*
+  fin topbar
 */
 /*
   regles attachées à la page admin index.php
@@ -225,8 +260,9 @@ form.form{
 */
 .new-item{
   background-color: #375c66;
+  position: relative;
   height: 100%;
-  padding: 0 0 0 250px;
+  margin: 0 0 0 250px;
 
 }
 /*

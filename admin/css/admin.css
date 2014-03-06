@@ -48,11 +48,11 @@ button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 
 textarea { overflow: auto; vertical-align: top; }
 
-.container { width: 100%; max-width: 960px; min-width: 640px; margin: 0 auto; }
+.container { width: 100%; max-width: 1200px; min-width: 640px; margin: 0 auto; }
 .container .row { *zoom: 1; }
 .container .row:before, .container .row:after { content: " "; display: table; }
 .container .row:after { clear: both; }
-.container .row .col { min-height: 1px; padding: 0 0; float: left; }
+.container .row .col { min-height: 1px; padding: 0 5px; float: left; }
 .container .row .col.col-1 { width: 8.33333%; }
 .container .row .col.col-2 { width: 16.66667%; }
 .container .row .col.col-3 { width: 25%; }
@@ -148,9 +148,17 @@ form.form input[type="text"], form.form input[type="password"] { width: 100%; pa
 */
 /* navigation side bar commune en admin
 */
-#left-nav-wrapper { height: 100%; position: fixed; overflow: hidden; width: 240px; top: 0; left: 0; bottom: 0; background-color: #323232; -webkit-box-shadow: rgba(0, 0, 0, 0.15) 5px 0 3px; -moz-box-shadow: rgba(0, 0, 0, 0.15) 5px 0 3px; box-shadow: rgba(0, 0, 0, 0.15) 5px 0 3px; }
+#left-nav-wrapper { height: 100%; position: fixed; overflow: hidden; width: 250px; top: 0; left: 0; bottom: 0; background-color: #323232; padding-top: 50px; z-index: 500; }
 
-/* navigation side bar commune en admin
+/* fin navigation side bar commune en admin
+*/
+#page { position: relative; padding-top: 60px; }
+
+/* topbar
+*/
+#top-bar { height: 50px; position: fixed; top: 0; left: 0; right: 0; width: 100%; background-color: #323232; z-index: 1000; -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 5px 3px; -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 5px 3px; box-shadow: rgba(0, 0, 0, 0.15) 0 5px 3px; }
+
+/* fin topbar
 */
 /* regles attachées à la page admin index.php
 */
@@ -160,7 +168,7 @@ form.form input[type="text"], form.form input[type="password"] { width: 100%; pa
 */
 /* regles attachées à la page nouvel_article.php
 */
-.new-item { background-color: #375c66; height: 100%; padding: 0 0 0 250px; }
+.new-item { background-color: #375c66; position: relative; height: 100%; margin: 0 0 0 250px; }
 
 /* fin regles attachées à la page nouvel_article.php
 */
