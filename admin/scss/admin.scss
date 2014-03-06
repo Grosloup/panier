@@ -189,22 +189,44 @@ form.form{
 */
 
 /*
+  navigation side bar commune en admin
+*/
+#left-nav-wrapper{
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  width: 240px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #323232;
+  @include box-shadow(rgba(0,0,0,0.15) 5px 0 3px);
+}
+
+/*
+  navigation side bar commune en admin
+*/
+/*
+  regles attachées à la page admin index.php
+*/
+.admin-home{
+  background-color: #375c66;
+  height: 100%;
+  padding: 0 0 0 250px;
+
+
+}
+/*
+  fin regles attachées à la page admin index.php
+*/
+
+/*
   regles attachées à la page nouvel_article.php
 */
 .new-item{
   background-color: #375c66;
   height: 100%;
   padding: 0 0 0 250px;
-
-  #left-nav-wrapper{
-    height: 100%;
-    position: absolute;
-    width: 240px;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    background-color: #323232;
-  }
 
 }
 /*

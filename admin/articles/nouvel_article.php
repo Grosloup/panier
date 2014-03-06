@@ -52,40 +52,14 @@ if(!$session->exists("user")){
 <p class="browserhappy">
     Vous utilisez une version d'internet explorer incompatible avec ce site. Mettez à jour internet explorer vers la version 11, ou utilisez des navigateurs tels que Google Chrome, Firefox,...
 </p>
-<div id="left-nav-wrapper">
-    <ul class="menu-accordeon">
-        <li>
-            <h5 class="titre">Gestion des Articles<span><i class="fa fa-chevron-circle-down"></i></span></h5>
-            <ul>
-                <li>Ajouter</li>
-                <li>Supprimer</li>
-                <li>Rechercher</li>
-            </ul>
-        </li>
-        <li>
-            <h5 class="titre">Les commandes<span><i class="fa fa-chevron-circle-down"></i></span></h5>
-            <ul>
-                <li>En cours</li>
-                <li>Archives</li>
-                <li>Rechercher</li>
-            </ul>
-        </li>
-        <li>
-            <h5 class="titre">Gestion des Admin.<span><i class="fa fa-chevron-circle-down"></i></span></h5>
-            <ul>
-                <li>Ajouter</li>
-                <li>Supprimer</li>
-                <li>Rechercher</li>
-            </ul>
-        </li>
-    </ul>
-</div>
+<?php include_once "../common/side_bar.php"; ?>
 <div class="container">
     <div class="row">
         <div class="col col-3">
-
+            <p>Lorem ipsum.</p>
         </div>
         <div class="col col-9">
+            <?php test(__FILE__); ?>
         </div>
     </div>
 </div>
