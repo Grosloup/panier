@@ -4,6 +4,10 @@
 @import "grid";
 @import "typo";
 
+
+html{
+  height: 100%;
+}
 // ie < 10
 body{
   background-color: #fff;
@@ -21,6 +25,7 @@ body{
 /*
   widgets /////////////////////////////////
 */
+@import "menu-accordeon";
 .message{
   padding: 10px;
   @include border-radius(4px);
@@ -183,4 +188,25 @@ form.form{
   fin css pour login.php /////////////////////////////////
 */
 
+/*
+  regles attachées à la page nouvel_article.php
+*/
+.new-item{
+  background-color: #375c66;
+  height: 100%;
+  padding: 0 0 0 250px;
 
+  #left-nav-wrapper{
+    height: 100%;
+    position: absolute;
+    width: 240px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #323232;
+  }
+
+}
+/*
+  fin regles attachées à la page nouvel_article.php
+*/

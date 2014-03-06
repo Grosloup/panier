@@ -88,6 +88,8 @@ h5 { font-size: 1.2em; }
 
 h6 { font-size: 1.1em; }
 
+html { height: 100%; }
+
 body { background-color: #fff; }
 body.lt-ie9 .browserhappy, body.ie9 .browserhappy { display: block; }
 
@@ -95,6 +97,17 @@ body.lt-ie9 .browserhappy, body.ie9 .browserhappy { display: block; }
 
 /* widgets /////////////////////////////////
 */
+.menu-accordeon > li { margin-bottom: 2px; }
+.menu-accordeon > li .titre { background-color: #323232; color: white; font-size: 18px; padding: 5px; margin-bottom: 0; cursor: pointer; position: relative; }
+.menu-accordeon > li .titre > span { position: absolute; display: block; bottom: 0; right: 0; width: 30px; height: 30px; text-align: center; }
+.menu-accordeon > li .titre > span i.fa { -webkit-transition: -webkit-transform 0.15s linear; -moz-transition: -moz-transform 0.15s linear; -o-transition: -o-transform 0.15s linear; transition: transform 0.15s linear; }
+.menu-accordeon > li .titre > span i.fa.up { -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); }
+.menu-accordeon > li > ul.activated li:first-child { -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 5px 3px inset; -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 5px 3px inset; box-shadow: rgba(0, 0, 0, 0.15) 0 5px 3px inset; }
+.menu-accordeon > li > ul.open { display: block; }
+.menu-accordeon > li > ul.close { display: none; }
+.menu-accordeon > li > ul > li { position: relative; padding: 5px; display: block; color: white; background-color: #585858; border-left: 1px solid #323232; border-right: 1px solid #323232; border-bottom: 1px solid #323232; }
+.menu-accordeon > li > ul > li a { color: white; }
+
 .message { padding: 10px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
 .message.warn { background-color: #ffb441; color: #d86c3d; -webkit-box-shadow: #da8400 1px 1px 0, #da8400 2px 2px 0; -moz-box-shadow: #da8400 1px 1px 0, #da8400 2px 2px 0; box-shadow: #da8400 1px 1px 0, #da8400 2px 2px 0; }
 
@@ -132,4 +145,11 @@ form.form input[type="text"], form.form input[type="password"] { width: 100%; pa
 .login-page .login-form .bottom-link { padding: 10px 0 0 0; font-size: 0.8em; }
 
 /* fin css pour login.php /////////////////////////////////
+*/
+/* regles attachées à la page nouvel_article.php
+*/
+.new-item { background-color: #375c66; height: 100%; padding: 0 0 0 250px; }
+.new-item #left-nav-wrapper { height: 100%; position: absolute; width: 240px; top: 0; left: 0; bottom: 0; background-color: #323232; }
+
+/* fin regles attachées à la page nouvel_article.php
 */

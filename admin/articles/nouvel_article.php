@@ -32,9 +32,10 @@ if(!$session->exists("user")){
 
     <script src="../js/vendor/modernizr.min.js"></script>
 
+    <link rel="stylesheet" href="../../css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../css/admin.css"/>
 </head>
-<body>
+<body class="new-item">
 <script>
     if (!document.all) {
         document.body.className += " gt-ie10";
@@ -51,6 +52,34 @@ if(!$session->exists("user")){
 <p class="browserhappy">
     Vous utilisez une version d'internet explorer incompatible avec ce site. Mettez à jour internet explorer vers la version 11, ou utilisez des navigateurs tels que Google Chrome, Firefox,...
 </p>
+<div id="left-nav-wrapper">
+    <ul class="menu-accordeon">
+        <li>
+            <h5 class="titre">Gestion des Articles<span><i class="fa fa-chevron-circle-down"></i></span></h5>
+            <ul>
+                <li>Ajouter</li>
+                <li>Supprimer</li>
+                <li>Rechercher</li>
+            </ul>
+        </li>
+        <li>
+            <h5 class="titre">Les commandes<span><i class="fa fa-chevron-circle-down"></i></span></h5>
+            <ul>
+                <li>En cours</li>
+                <li>Archives</li>
+                <li>Rechercher</li>
+            </ul>
+        </li>
+        <li>
+            <h5 class="titre">Gestion des Admin.<span><i class="fa fa-chevron-circle-down"></i></span></h5>
+            <ul>
+                <li>Ajouter</li>
+                <li>Supprimer</li>
+                <li>Rechercher</li>
+            </ul>
+        </li>
+    </ul>
+</div>
 <div class="container">
     <div class="row">
         <div class="col col-3">
@@ -60,5 +89,10 @@ if(!$session->exists("user")){
         </div>
     </div>
 </div>
+<script src="../js/vendor/jquery-1.11.0.min.js"></script>
+<script src="../js/jquery-plugins/menu-accordeon.js"></script>
+<script>
+    $(".menu-accordeon").menuAccordeon();
+</script>
 </body>
 </html>
