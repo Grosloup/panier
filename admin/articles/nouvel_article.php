@@ -87,11 +87,13 @@ if(!$session->exists("user")){
                     <div class="row">
                         <div class="col col-6">
                             <label for="category">Type de l'article</label>
-                            <select name="new_item_form[item_categories_id]" id="category"></select>
+                            <select name="new_item_form[item_categories_id]" id="category" ng-model="item.category_id" ng-options="c.name for c in categories " ng-change="onChangeType()">
+                                <option value="">Choisissez un type</option>
+                            </select>
                         </div>
                         <div class="col col-6">
                             <label for="new_category">Ou créer un nouveau type</label>
-                            <input type="text" name="new_item_form[new_category]" id="new_category"/>
+                            <input type="text" name="new_item_form[new_category]" id="new_category" ng-blur="newtypeBlur()" ng-model="newtype"/>
                         </div>
                     </div>
 

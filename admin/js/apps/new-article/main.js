@@ -18,6 +18,12 @@ app.controller("NewAricleFormCtrl", ["$scope", "$http", function($scope, $http){
         "stock": 0
     };
 
+    $scope.newtype = "";
+
+    $scope.categories = [
+        //{"name":"sans type", "id":0}
+    ];
+
     $scope.designationBlur = function () {
         //console.log("designation:" + $scope.item.name);
         // test de validité
@@ -33,6 +39,14 @@ app.controller("NewAricleFormCtrl", ["$scope", "$http", function($scope, $http){
     };
 
     $scope.stockBlur = function () {
+        // test de validité
+    };
+
+    $scope.onChangeType = function(){
+
+    };
+
+    $scope.newtypeBlur = function () {
         // test de validité
     };
 
