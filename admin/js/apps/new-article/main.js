@@ -13,7 +13,9 @@ app.controller("NewAricleFormCtrl", ["$scope", "$http", function($scope, $http){
 
     $scope.item = {
         "name": "",
-        "reference": ""
+        "reference": "",
+        "description": "",
+        "stock": 0
     };
 
     $scope.designationBlur = function () {
@@ -22,7 +24,15 @@ app.controller("NewAricleFormCtrl", ["$scope", "$http", function($scope, $http){
     };
 
     $scope.referenceBlur = function () {
-        console.log("reference:" + $scope.item.reference);
+        //console.log("reference:" + $scope.item.reference);
+        // test de validité
+    };
+
+    $scope.descriptionBlur = function () {
+        // test de validité
+    };
+
+    $scope.stockBlur = function () {
         // test de validité
     };
 

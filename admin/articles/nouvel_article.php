@@ -70,13 +70,13 @@ if(!$session->exists("user")){
                     <label for="reference">Référence*</label>
                     <input type="text" name="new_item_form[reference]" id="reference" ng-blur="referenceBlur()" ng-model="item.reference"/>
 
-                    <label for="desription">Description</label>
+                    <label for="desription" ng-blur="descriptionBlur()" ng-model="item.description">Description</label>
                     <textarea name="new_item_form[description]" id="desription"></textarea>
 
                     <div class="row">
                         <div class="col col-6">
                             <label for="stock">Nombre d'articles mis en stock</label>
-                            <input type="text" name="new_item_form[stock]" id="stock"/>
+                            <input type="text" name="new_item_form[stock]" id="stock" ng-blur="stockBlur()" ng-model="item.stock"/>
                         </div>
                         <div class="col col-6">
                             <label for="prix">Prix de vente hors taxe*</label>
