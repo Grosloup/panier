@@ -14,3 +14,18 @@ function autoload($classname=""){
 
     require_once $filename;
 }
+
+function getHeader($datas = [], $filename = ""){
+    if(!$filename){
+        $filename = realpath(dirname(__DIR__)) . DS . "common" . DS . "header.php";
+    }
+    extract($datas);
+
+    ob_start();
+
+    include_once $filename;
+
+    return ob_get_clean();
+}
+
+
