@@ -10,7 +10,7 @@ defined("ROOT")         || define("ROOT", realpath(dirname(__DIR__)));
 defined("ADMIN_ROOT")   || define("ADMIN_ROOT", ROOT . DS . "admin");
 defined("CLASS_DIR")    || define("CLASS_DIR", ADMIN_ROOT . DS . "php" . DS . "classes");
 
-include_once "php/functions.php";
+include_once "functions.php";
 
 if(!function_exists("autoload")){
     die("Pas d'autoloader de classes défini !");
