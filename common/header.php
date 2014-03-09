@@ -3,11 +3,9 @@
  * Created by PhpStorm.
  * User: grosloup
  * Date: 09/03/14
- * Time: 00:34
+ * Time: 01:45
  */
 ?>
-
-
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="fr"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="fr"> <![endif]-->
@@ -20,8 +18,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title><?php echo $titre ?></title>
 
-    <script src="/js/vendor/modernizr.min.js"></script>
+<script src="/js/vendor/modernizr.min.js"></script>
 
-    <link rel="stylesheet" href="/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="/admin/css/admin.css"/>
+<link rel="stylesheet" href="/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="/css/master.css"/>
 </head>
