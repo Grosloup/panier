@@ -2,3 +2,20 @@
 @import "normalize";
 @import "mixins";
 @import "grid";
+
+html{
+  height: 100%;
+}
+// ie < 10
+body{
+  background-color: #fff;
+  &.lt-ie9, &.ie9{
+    .browserhappy{
+      display: block;
+    }
+  }
+}
+
+.browserhappy{
+  display: none;
+}

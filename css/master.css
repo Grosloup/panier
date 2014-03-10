@@ -65,3 +65,10 @@ textarea { overflow: auto; vertical-align: top; }
 .container .row .col.col-12 { width: 100%; }
 .container .row .col .row .col:first-child { padding-left: 0; }
 .container .row .col .row .col:last-child { padding-right: 0; }
+
+html { height: 100%; }
+
+body { background-color: #fff; }
+body.lt-ie9 .browserhappy, body.ie9 .browserhappy { display: block; }
+
+.browserhappy { display: none; }
