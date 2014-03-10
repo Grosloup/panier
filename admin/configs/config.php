@@ -41,6 +41,10 @@ $container["session_opts"] = [
     "flash_name"        => "flash",
     "csrf_salt"         => "WTodzfag9nuOXSyaisE6Ernlw8qx",
     "csrf_token_name"   => "_token_",
+    "client_key_name"   => "client",
+    "client_class"      => "Client",
+    "cart_key_name"     => "cart",
+    "cart_class"        => "Cart",
 ];
 
 $container["session"] = function($c){

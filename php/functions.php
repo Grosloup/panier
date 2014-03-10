@@ -27,3 +27,22 @@ function getHeader($datas = [], $filename = ""){
 
     return ob_get_clean();
 }
+
+function excerpt($text="", $length=80, $end = "..."){
+
+    if(strlen($text) > $length){
+        $text = substr($text, 0 , $length) . $end;
+    }
+
+    return $text;
+}
+
+function excerpt_word($text="", $length=50, $end = "..."){
+    $count = str_word_count($text);
+    if($count > $length){
+        $words = str_word_count($text, 1);
+        $words = array_slice($words, 0 , $length);
+        $text = implode(" ", $words) . $end;
+    }
+    return $text;
+}

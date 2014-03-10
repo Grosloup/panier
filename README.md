@@ -9,7 +9,7 @@ But: implanter un mecanisme simple, comprendre le fonctionnement
 - Le client peut parcourir une liste d'article
   * Le panier est visible et à jour
   * le client peut accéder au panier par un lien
-  * le client peut passer sa commande
+  * le client peut passer sa commande en passant par la page panier
 - Le client peut visiter une page d'un article
   * Le panier est visible et à jour
   * le client peut passer sa commande
