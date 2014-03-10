@@ -9,4 +9,5 @@ return [
     "home" => "/",
     "admin_home" => "/admin/index.php",
     "nouvel_article"=> "/admin/articles/nouvel_article.php",
+    "home_pages_article"=> "/pages/article.php"
 ];

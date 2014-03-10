@@ -17,9 +17,17 @@ class Router {
         $this->routes = $routes;
     }
 
-    public function getRoute($routeName = "", $default = "")
+    public function getRoute($routeName = "", $get=[], $default = "")
     {
         if(array_key_exists($routeName, $this->routes)){
+            if($get){
+                $getStr = "?";
+                foreach($get as $k=>$v){
+                    $getStr .= $k."=".urlencode($v)."&";
+                }
+                $getStr = rtrim($getStr, "&");
+                return $this->routes[$routeName].htmlentities($getStr);
+            }
             return $this->routes[$routeName];
         }
         return $default;

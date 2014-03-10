@@ -20,8 +20,22 @@ echo getHeader(["titre"=> "Bienvenue - ZooBeauvalBoutique"]);
             <div class="navs">
                 <div class="nav-right">
                     <ul>
-                        <li><a href=""><i class="fa fa-user"></i> Mon Compte</a></li>
-                        <li><a href=""><i class="fa fa-shopping-cart"></i> Mon Panier</a></li>
+                        <li>
+                            <div class="nav-box">
+                                <h5><i class="fa fa-user"></i> Mon Compte</h5>
+                                <div><a class="btn" href="">Me connecter</a></div>
+                                <div><a class="btn" href="">Créer un compte</a></div>
+
+                            </div>
+                        </li> <!-- <a href=""><i class="fa fa-user"></i> Mon Compte</a> -->
+                        <li>
+                            <div class="nav-box">
+                                <h5><i class="fa fa-shopping-cart"></i> Mon Panier</h5>
+                                <p><span>0</span> article(s)</p>
+                                <p><span>0,00</span> €</p>
+                                <a class="btn" href="">Voir</a>
+                            </div>
+                        </li> <!-- <a href=""><i class="fa fa-shopping-cart"></i> Mon Panier</a> -->
                     </ul>
                 </div>
             </div>
@@ -43,13 +57,13 @@ echo getHeader(["titre"=> "Bienvenue - ZooBeauvalBoutique"]);
                             <img src="http://placekitten.com/g/150/150" alt=""/>
                         </div>
                         <div class="article-details">
-                            <h3 class="article-name"><a href="">Lorem ipsum dolor sit</a></h3>
+                            <h3 class="article-name"><a href="<?php echo $router->getRoute("home_pages_article",["article_id"=>1]); ?>">Lorem ipsum dolor sit</a></h3>
 
                             <div class="row">
                                 <div class="col col-7 article-description">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos excepturi maxime
                                         possimus...</p>
-                                    <a class="btn" href="">Détails <i class="fa fa-hand-o-right"></i></a>
+                                    <a class="btn" href="<?php echo $router->getRoute("home_pages_article",["article_id"=>1]); ?>">Détails <i class="fa fa-hand-o-right"></i></a>
                                 </div>
                                 <div class="col col-2 article-price">
                                     <p>00,00 €</p>
@@ -71,13 +85,13 @@ echo getHeader(["titre"=> "Bienvenue - ZooBeauvalBoutique"]);
                             <img src="http://placekitten.com/g/150/150" alt=""/>
                         </div>
                         <div class="article-details">
-                            <h3 class="article-name"><a href="">Lorem ipsum dolor sit</a></h3>
+                            <h3 class="article-name"><a href="<?php echo $router->getRoute("home_pages_article",["article_id"=>2]); ?>">Lorem ipsum dolor sit</a></h3>
 
                             <div class="row">
                                 <div class="col col-7 article-description">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos excepturi maxime
                                         possimus...</p>
-                                    <a class="btn" href="">Détails <i class="fa fa-hand-o-right"></i></a>
+                                    <a class="btn" href="<?php echo $router->getRoute("home_pages_article",["article_id"=>2]); ?>">Détails <i class="fa fa-hand-o-right"></i></a>
                                 </div>
                                 <div class="col col-2 article-price">
                                     <p>00,00 €</p>
