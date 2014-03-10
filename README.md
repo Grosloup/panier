@@ -17,6 +17,7 @@ But: implanter un mecanisme simple, comprendre le fonctionnement
 - Dans la page panier le client peut:
   * mettre à jour ses articles + - supprimer
   * passer sa commande
+  * continuer ses achats
 
 ## Dépendances externes
 - jquery-1.11.0.min.js
