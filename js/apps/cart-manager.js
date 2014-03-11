@@ -71,6 +71,14 @@
             display.val(initQuantity);
         }
 
+        function updateOnResponse(newAmount, newQuantity){
+            rowAmount.text((initQuantity * uPrice).toFixed(2));
+            amount.text(newAmount);
+            totalAmount.text(newAmount);
+            quantity.text(newQuantity);
+            overlay.removeClass("active");
+        }
+
         display.on("blur", function(evt){
             evt.preventDefault();
             var q;
@@ -90,22 +98,10 @@
             $.post(postUrl, {id:id,quantity: q}, "json")
                 .done(function(data,status,xhr){
                     if(data.errorStatus == "ok"){
-                        rowAmount.text(initQuantity * uPrice);
-                        amount.text(data.newAmount);
-                        totalAmount.text(data.newAmount);
-                        quantity.text(data.newQuantity);
-                        overlay.removeClass("active");
+                        updateOnResponse(data.newAmount, data.newQuantity);
                     }
                 });
         });
-
-        function updateOnResponse(newAmount, newQuantity){
-            rowAmount.text((initQuantity * uPrice).toFixed(2));
-            amount.text(newAmount);
-            totalAmount.text(newAmount);
-            quantity.text(newQuantity);
-            overlay.removeClass("active");
-        }
 
         display.on("keyup", function(evt){
             evt.preventDefault();
