@@ -79,7 +79,7 @@ echo getHeader(["titre"=> "Votre panier - ZooBeauvalBoutique"]);
                             <div class="col col-2 article-price">
                                 <p><?php echo $row["article"]->prix; ?> <span class="small">€ TTC</span></p>
                             </div>
-                            <div class="col col-2 article-quantity" data-article-uprice="<?php echo $row["article"]->prix; ?>">
+                            <div class="col col-2 article-quantity" data-article-uprice="<?php echo $row["article"]->prix; ?>" data-article-id="<?php echo $row["article"]->id; ?>" data-article-stock="<?php echo $row["article"]->stock; ?>">
                                 <input type="text" class="article-quantity-field" value="<?php echo $row["quantity"]; ?>"/> <a href="" class="article-plus"><i class="fa fa-plus-circle"></i></a> <a href=""  class="article-minus"><i class="fa fa-minus-circle"></i></a>
                             </div>
                             <div class="col col-2 article-row-amount">
@@ -103,5 +103,10 @@ echo getHeader(["titre"=> "Votre panier - ZooBeauvalBoutique"]);
     <?php dump($_SESSION); ?>
 </div>
 <script src="/js/vendor/jquery-1.11.0.min.js"></script>
+<script src="/js/vendor/spin.min.js"></script>
+<script src="/js/vendor/jquery.spin.js"></script>
+<script>
+
+</script>
 <script src="/js/apps/cart-manager.js"></script>
 </body>
