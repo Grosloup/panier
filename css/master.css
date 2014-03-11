@@ -184,5 +184,9 @@ a { text-decoration: none; }
 .cart #main #articles-list .article .article-quantity .article-quantity-field { display: inline-block; padding: 4px; vertical-align: middle; border: 1px solid #ddd; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; max-width: 50px; text-align: center; line-height: 20px; height: 28px; }
 .cart #main #articles-list .article .article-quantity a.article-plus, .cart #main #articles-list .article .article-quantity a.article-minus { display: inline-block; color: #aaa; vertical-align: middle; font-size: 20px; }
 .cart #main #articles-list .article .article-row-amount p { color: #2e85a3; text-align: center; font-weight: bold; }
+.cart #main #total { padding: 10px; color: #fff; margin-bottom: 10px; }
+.cart #main #total .row { background-color: #2e85a3; -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 4px; -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 4px; box-shadow: rgba(0, 0, 0, 0.1) 0 0 4px; padding: 10px; }
+.cart #main #total .row #label { text-align: right; font-size: 140%; }
+.cart #main #total .row #amount { text-align: center; font-size: 140%; }
 
 #footer { min-height: 250px; background-color: #2e85a3; -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 5px 5px inset; -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 5px 5px inset; box-shadow: rgba(0, 0, 0, 0.15) 0 5px 5px inset; padding: 10px 0 0 0; }

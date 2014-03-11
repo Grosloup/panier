@@ -482,6 +482,26 @@ a{
         }
       }
     }
+    #total{
+      padding: 10px;
+      color: #fff;
+
+      margin-bottom: 10px;
+      .row{
+        background-color: $blueBeauval;
+        @include box-shadow(rgba(0,0,0,0.1) 0 0 4px);
+
+        padding: 10px;
+        #label{
+          text-align: right;
+          font-size: 140%;
+        }
+        #amount{
+          text-align: center;
+          font-size: 140%;
+        }
+      }
+    }
   }
 }
 

@@ -22,7 +22,7 @@
     var cart = $("#panier");
     var amount = cart.find("#montant-total");
     var quantity = cart.find("#num-articles");
-
+    var totalAmount = $("#total-amount");
     var articleQuantity = $(".article-quantity");
     var overlay = $("<div class='overlay'><div id='spinner-box'></div></div>");
     var spinnerBox = overlay.find("#spinner-box");
@@ -56,7 +56,7 @@
 
         function updateRowAmount(){
             var total = uPrice * parseInt(display.val());
-            rowAmount.text(total);
+            rowAmount.text(total.toFixed(2));
         }
 
         function updateDisplay(q){
@@ -94,6 +94,7 @@
                     if(data.errorStatus == "ok"){
                         rowAmount.text(initQuantity * uPrice);
                         amount.text(data.newAmount);
+                        totalAmount.text(data.newAmount);
                         quantity.text(data.newQuantity);
                         overlay.removeClass("active");
                     }
@@ -124,6 +125,7 @@
                         if(data.errorStatus == "ok"){
                             rowAmount.text(initQuantity * uPrice);
                             amount.text(data.newAmount);
+                            totalAmount.text(data.newAmount);
                             quantity.text(data.newQuantity);
                             overlay.removeClass("active");
                         }
@@ -140,6 +142,7 @@
                     if(data.errorStatus == "ok"){
                         rowAmount.text((initQuantity * uPrice).toFixed(2));
                         amount.text(data.newAmount);
+                        totalAmount.text(data.newAmount);
                         quantity.text(data.newQuantity);
                         overlay.removeClass("active");
                     }
@@ -155,6 +158,7 @@
                     if(data.errorStatus == "ok"){
                         rowAmount.text((initQuantity * uPrice).toFixed(2));
                         amount.text(data.newAmount);
+                        totalAmount.text(data.newAmount);
                         quantity.text(data.newQuantity);
                         overlay.removeClass("active");
                     }

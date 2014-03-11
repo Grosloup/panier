@@ -93,6 +93,21 @@ echo getHeader(["titre"=> "Votre panier - ZooBeauvalBoutique"]);
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col col-12">
+                <div id="total">
+                    <div class="row">
+                        <div class="col col-9" id="label">
+                            Total de votre panier:
+                        </div>
+                        <div class="col col-2" id="amount">
+                            <span id="total-amount"><?php echo $cart->getAmount(); ?></span> <span class="small">€ TTC</span>
+                        </div>
+                        <div class="col col-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
