@@ -30,7 +30,7 @@
                             <div class="nav-box" id="panier">
                                 <h5><i class="fa fa-shopping-cart"></i> Mon Panier</h5>
                                 <p><span id="num-articles"><?php echo $cart->getNumItems(); ?></span> article(s)</p>
-                                <p><span id="montant-total"><?php echo $cart->getAmount(); ?></span> €</p>
+                                <p><span id="montant-total"><?php echo $cart->getAmount(); ?></span> <i class="fa fa-eur"></i></p>
                                 <a class="btn" href="<?php echo $router->getRoute("cart"); ?>">Voir</a>
                             </div>
                         </li>

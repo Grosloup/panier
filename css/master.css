@@ -185,8 +185,10 @@ a { text-decoration: none; }
 .cart #main #articles-list .article .article-quantity a.article-plus, .cart #main #articles-list .article .article-quantity a.article-minus { display: inline-block; color: #aaa; vertical-align: middle; font-size: 20px; }
 .cart #main #articles-list .article .article-row-amount p { color: #2e85a3; text-align: center; font-weight: bold; }
 .cart #main #total { padding: 10px; color: #fff; margin-bottom: 10px; }
-.cart #main #total .row { background-color: #2e85a3; -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 4px; -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 4px; box-shadow: rgba(0, 0, 0, 0.1) 0 0 4px; padding: 10px; }
+.cart #main #total .row { background-color: #2e85a3; -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px; -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px; box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px; padding: 10px; }
 .cart #main #total .row #label { text-align: right; font-size: 140%; }
 .cart #main #total .row #amount { text-align: center; font-size: 140%; }
+.cart #main #cart-final-controls .btn { color: #2e85a3; text-decoration: none; outline: none; padding: 8px 15px; background-color: #ffd32f; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; font-weight: bold; cursor: pointer; display: inline-block; vertical-align: middle; }
+.cart #main #cart-final-controls .btn.back-shopping { background-color: #2e85a3; color: #fff; }
 
 #footer { min-height: 250px; background-color: #2e85a3; -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 5px 5px inset; -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 5px 5px inset; box-shadow: rgba(0, 0, 0, 0.15) 0 5px 5px inset; padding: 10px 0 0 0; }

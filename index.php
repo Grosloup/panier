@@ -88,7 +88,6 @@ echo getHeader(["titre"=> "Bienvenue - ZooBeauvalBoutique"]);
 </div>
 
 <div id="footer">
-    <?php dump($_SESSION); ?>
 </div>
 
 <script src="/js/vendor/jquery-1.11.0.min.js"></script>

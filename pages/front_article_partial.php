@@ -21,7 +21,7 @@
                 <a class="btn" href="<?php echo $router->getRoute("home_pages_article",["article_id"=>$article->id]); ?>">Détails <i class="fa fa-hand-o-right"></i></a>
             </div>
             <div class="col col-2 article-price">
-                <p><?php echo $article->prix ?> €</p>
+                <p><?php echo $article->prix ?> <i class="fa fa-eur"></i></p>
             </div>
             <div class="col col-2 article-stock" >
                 <?php if($article->stock > 5): ?>

@@ -489,7 +489,7 @@ a{
       margin-bottom: 10px;
       .row{
         background-color: $blueBeauval;
-        @include box-shadow(rgba(0,0,0,0.1) 0 0 4px);
+        @include box-shadow(rgba(0,0,0,0.2) 0 0 4px);
 
         padding: 10px;
         #label{
@@ -502,8 +502,28 @@ a{
         }
       }
     }
+    #cart-final-controls{
+      .btn{
+        color: $blueBeauval;
+        text-decoration: none;
+        outline: none;
+        padding: 8px 15px;
+        background-color: $jauneBeauval;
+        @include border-radius(5px);
+        font-weight: bold;
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        &.back-shopping{
+          background-color: $blueBeauval;
+          color: #fff;
+        }
+      }
+    }
   }
 }
+
+
 
 
 

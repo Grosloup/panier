@@ -50,6 +50,7 @@
         var display = $(this).find(".article-quantity-field");
         var uPrice = parseFloat($(this).data("articleUprice"));
         var id = $(this).data("articleId");
+        var parent = $("#cart-article-" + id);
         var stock = $(this).data("articleStock");
         var rowAmount = $(this).next(".article-row-amount").find("span.row-amount");
         var initQuantity = parseInt(display.val());
@@ -66,7 +67,8 @@
                 initQuantity = stock;
             }
             if(initQuantity<1){
-                initQuantity= 1;
+                //initQuantity= 1;
+                parent.remove();
             }
             display.val(initQuantity);
         }

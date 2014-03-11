@@ -83,7 +83,7 @@ echo getHeader(["titre"=> "Votre panier - ZooBeauvalBoutique"]);
                                 <input type="text" class="article-quantity-field" value="<?php echo $row["quantity"]; ?>"/> <a href="" class="article-plus"><i class="fa fa-plus-circle"></i></a> <a href=""  class="article-minus"><i class="fa fa-minus-circle"></i></a>
                             </div>
                             <div class="col col-2 article-row-amount">
-                                <p><span class="row-amount">0</span> <span class="small">€ TTC</span></p>
+                                <p><span class="row-amount">0</span> <span class="small"><i class="fa fa-eur"></i> TTC</span></p>
                             </div>
                             <div class="col col-1">
 
@@ -101,11 +101,21 @@ echo getHeader(["titre"=> "Votre panier - ZooBeauvalBoutique"]);
                             Total de votre panier:
                         </div>
                         <div class="col col-2" id="amount">
-                            <span id="total-amount"><?php echo $cart->getAmount(); ?></span> <span class="small">€ TTC</span>
+                            <span id="total-amount"><?php echo $cart->getAmount(); ?></span> <span class="small"><i class="fa fa-eur"></i> TTC</span>
                         </div>
                         <div class="col col-1"></div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row" id="cart-final-controls">
+            <div class="col col-3"></div>
+            <div class="col col-3"></div>
+            <div class="col col-3">
+                <a class="btn back-shopping" href="<?php echo $router->getRoute("home"); ?>"><i class="fa fa-chevron-left"></i> Continuez vos achats</a>
+            </div>
+            <div class="col col-3">
+                <a class="btn payment" href="#">Passez votre commande <i class="fa fa-chevron-right"></i></a>
             </div>
         </div>
     </div>
@@ -114,8 +124,6 @@ echo getHeader(["titre"=> "Votre panier - ZooBeauvalBoutique"]);
 
 
 <div id="footer">
-    <?php dump($cartRows); ?>
-    <?php dump($_SESSION); ?>
 </div>
 <script src="/js/vendor/jquery-1.11.0.min.js"></script>
 <script src="/js/vendor/spin.min.js"></script>
