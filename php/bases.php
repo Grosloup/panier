@@ -18,7 +18,7 @@ if(!function_exists("autoload")){
 
 spl_autoload_register("autoload");
 
-
+logIp();
 
 include_once ADMIN_ROOT . DS ."configs" . DS . "config.php";
 

@@ -78,3 +78,11 @@ function excerpt_word($text="", $length=50, $end = "..."){
     }
     return $text;
 }
+
+function logIp(){
+    if(!empty($_SERVER["REMOTE_ADDR"])){
+        $date = new DateTime('now',new DateTimeZone("Europe/Paris"));
+        $text = $date->format("d/m/Y H:i:s") . " :: " . $_SERVER["REMOTE_ADDR"] . PHP_EOL;
+        file_put_contents(ROOT.DS."logs".DS."ips.log", $text, FILE_APPEND);
+    }
+}
