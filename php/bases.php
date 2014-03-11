@@ -18,9 +18,12 @@ if(!function_exists("autoload")){
 
 spl_autoload_register("autoload");
 
-setEnv("dev");
+
 
 include_once ADMIN_ROOT . DS ."configs" . DS . "config.php";
+
+setEnv($container["debug"]["env"]);
+
 
 $routes = include_once ADMIN_ROOT . DS ."configs" . DS . "routes.php";
 /** @var Router $router */

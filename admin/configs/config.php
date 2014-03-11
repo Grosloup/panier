@@ -7,6 +7,12 @@
  */
 $container = new Pimple();
 
+// bases
+
+$container["debug"] = [
+    "env" => "prod",
+];
+
 // databases
 
 $container["db"]    = [
