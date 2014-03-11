@@ -47,7 +47,6 @@
 
     cartBtn.on("click", function(evt){
         evt.preventDefault();
-
         var id = $(this).data("articleId");
         overlay.addClass("active");
         $.post(postUrl, {id: id}, "json")

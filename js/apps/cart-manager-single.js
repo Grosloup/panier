@@ -78,7 +78,6 @@
 
     display.on("keyup", function(evt){
         evt.preventDefault();
-
         if(evt.keyCode == 13){
             var q;
             var val = $(this).val();
@@ -94,7 +93,6 @@
             $.post(postUrl, {id:id,quantity: q}, "json")
                 .done(function(data,status,xhr){
                     if(data.errorStatus == "ok"){
-                        //rowAmount.text(initQuantity * uPrice);
                         amount.text(data.newAmount);
                         quantity.text(data.newQuantity);
                         overlay.removeClass("active");
@@ -105,7 +103,6 @@
 
     commandBtn.on("click", function(evt){
         evt.preventDefault();
-
         overlay.addClass("active");
         $.post(postUrl, {id:id,quantity: display.val()}, "json")
             .done(function(data,status,xhr){

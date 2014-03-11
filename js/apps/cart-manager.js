@@ -62,12 +62,10 @@
 
         function updateDisplay(q){
             initQuantity += q;
-
             if(initQuantity > stock){
                 initQuantity = stock;
             }
             if(initQuantity<1){
-                //initQuantity= 1;
                 parent.remove();
             }
             display.val(initQuantity);
@@ -75,7 +73,6 @@
 
         display.on("blur", function(evt){
             evt.preventDefault();
-
             var q;
             var val = $(this).val();
             if(!val.match(/^[0-9]+$/)){
@@ -88,7 +85,6 @@
             if(q<0 &&  Math.abs(q) > initQuantity){
                 q = -initQuantity;
             }
-
             overlay.addClass("active");
             updateDisplay(q);
             $.post(postUrl, {id:id,quantity: q}, "json")
@@ -103,17 +99,16 @@
                 });
         });
 
-        function updateOnResponse(amount, quantity){
+        function updateOnResponse(newAmount, newQuantity){
             rowAmount.text((initQuantity * uPrice).toFixed(2));
-            amount.text(data.newAmount);
-            totalAmount.text(data.newAmount);
-            quantity.text(data.newQuantity);
+            amount.text(newAmount);
+            totalAmount.text(newAmount);
+            quantity.text(newQuantity);
             overlay.removeClass("active");
         }
 
         display.on("keyup", function(evt){
             evt.preventDefault();
-
             if(evt.keyCode == 13){
                 var q;
                 var val = $(this).val();
@@ -127,13 +122,11 @@
                 if(q<0 &&  Math.abs(q) > initQuantity){
                     q = -initQuantity;
                 }
-
                 overlay.addClass("active");
                 updateDisplay(q);
                 $.post(postUrl, {id:id,quantity: q}, "json")
                     .done(function(data,status,xhr){
                         if(data.errorStatus == "ok"){
-
                             updateOnResponse(data.newAmount, data.newQuantity);
                         }
                     });
