@@ -103,6 +103,14 @@
                 });
         });
 
+        function updateOnResponse(amount, quantity){
+            rowAmount.text((initQuantity * uPrice).toFixed(2));
+            amount.text(data.newAmount);
+            totalAmount.text(data.newAmount);
+            quantity.text(data.newQuantity);
+            overlay.removeClass("active");
+        }
+
         display.on("keyup", function(evt){
             evt.preventDefault();
 
@@ -125,11 +133,8 @@
                 $.post(postUrl, {id:id,quantity: q}, "json")
                     .done(function(data,status,xhr){
                         if(data.errorStatus == "ok"){
-                            rowAmount.text(initQuantity * uPrice);
-                            amount.text(data.newAmount);
-                            totalAmount.text(data.newAmount);
-                            quantity.text(data.newQuantity);
-                            overlay.removeClass("active");
+
+                            updateOnResponse(data.newAmount, data.newQuantity);
                         }
                     });
             }
@@ -142,11 +147,7 @@
             $.post(postUrl, {id:id,quantity: 1}, "json")
                 .done(function(data,status,xhr){
                     if(data.errorStatus == "ok"){
-                        rowAmount.text((initQuantity * uPrice).toFixed(2));
-                        amount.text(data.newAmount);
-                        totalAmount.text(data.newAmount);
-                        quantity.text(data.newQuantity);
-                        overlay.removeClass("active");
+                        updateOnResponse(data.newAmount, data.newQuantity);
                     }
                 });
         });
@@ -158,11 +159,7 @@
             $.post(postUrl, {id:id,quantity: -1}, "json")
                 .done(function(data,status,xhr){
                     if(data.errorStatus == "ok"){
-                        rowAmount.text((initQuantity * uPrice).toFixed(2));
-                        amount.text(data.newAmount);
-                        totalAmount.text(data.newAmount);
-                        quantity.text(data.newQuantity);
-                        overlay.removeClass("active");
+                        updateOnResponse(data.newAmount, data.newQuantity);
                     }
                 });
         });
