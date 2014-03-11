@@ -66,7 +66,7 @@ if($article == null){
 
 
 ////////
-sleep(3);
+sleep(2);
 header("Content-type: application/json");
 echo json_encode(
     [
