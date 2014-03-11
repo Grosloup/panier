@@ -91,12 +91,15 @@ h6 { font-size: 1em; font-weight: bold; }
 
 a { text-decoration: none; }
 
+.small { font-size: 60%; }
+
 #topbar { height: 100px; background-color: #2e85a3; -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 5px 5px; -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 5px 5px; box-shadow: rgba(0, 0, 0, 0.15) 0 5px 5px; }
 #topbar .container { height: 100%; }
 #topbar .container .row { height: 100%; }
 #topbar .logo { float: left; padding: 5px; -webkit-transform: rotate(-5deg); -moz-transform: rotate(-5deg); -ms-transform: rotate(-5deg); -o-transform: rotate(-5deg); transform: rotate(-5deg); }
 #topbar .title { float: left; padding: 25px 5px; }
 #topbar .title h1 { text-align: center; color: #ffd32f; margin: 0; font-weight: bold; }
+#topbar .title h1 a { color: inherit; }
 #topbar .navs { height: 100%; *zoom: 1; color: #ffd32f; font-size: 120%; }
 #topbar .navs:before, #topbar .navs:after { content: " "; display: table; }
 #topbar .navs:after { clear: both; }
@@ -140,5 +143,26 @@ a { text-decoration: none; }
 #main #articles .article .article-details .article-to-cart { padding: 10px 0; }
 #main #articles .article .article-details .article-to-cart .btn { font-size: 20px; color: #fff; text-decoration: none; outline: none; padding: 8px 15px; background-color: #2e85a3; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; font-weight: bold; cursor: pointer; display: inline-block; vertical-align: middle; }
 #main #articles .article .article-details .article-to-cart .btn.disabled { background-color: #aaa; cursor: default; }
+
+.single-article #main { min-height: 1000px; }
+.single-article #main #article { background-color: #fff; padding: 10px; }
+.single-article #main #article h3 { color: #2e85a3; margin-bottom: 5px; padding-bottom: 5px; border-bottom: 1px solid #2e85a3; font-weight: bold; }
+.single-article #main #article .article-picture img { width: 150px; }
+.single-article #main #article .article-description { padding: 10px 0; text-align: justify; }
+.single-article #main #article .article-price { padding: 10px 0; }
+.single-article #main #article .article-price p { color: #2e85a3; font-size: 180%; text-align: center; font-weight: bold; }
+.single-article #main #article .article-stock { padding: 10px 0; }
+.single-article #main #article .article-stock p { font-size: 140%; text-align: center; font-weight: bold; }
+.single-article #main #article .article-stock p.success { color: #29aa1e; }
+.single-article #main #article .article-stock p.alert { color: #ff5026; }
+.single-article #main #article .article-stock p.warn { color: #ffc050; }
+.single-article #main #article .article-quantity { text-align: center; padding: 20px 0; }
+.single-article #main #article .article-quantity #article-quantity-field { display: inline-block; padding: 4px; vertical-align: middle; border: 1px solid #ddd; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; max-width: 50px; text-align: center; line-height: 20px; height: 28px; }
+.single-article #main #article .article-quantity .wrapper { display: inline-block; vertical-align: middle; }
+.single-article #main #article .article-quantity span.label { display: inline-block; vertical-align: middle; font-size: 20px; }
+.single-article #main #article .article-quantity a.article-plus, .single-article #main #article .article-quantity a.article-minus { display: inline-block; color: #aaa; vertical-align: middle; font-size: 20px; }
+.single-article #main #article .article-command { text-align: center; }
+.single-article #main #article .article-command .btn { color: #2e85a3; text-decoration: none; outline: none; padding: 8px 15px; background-color: #ffd32f; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; font-weight: bold; cursor: pointer; display: inline-block; vertical-align: middle; }
+.single-article #main #article .article-command .btn.disabled { background-color: #aaa; cursor: default; }
 
 #footer { min-height: 250px; background-color: #2e85a3; -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 5px 5px inset; -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 5px 5px inset; box-shadow: rgba(0, 0, 0, 0.15) 0 5px 5px inset; padding: 10px 0 0 0; }

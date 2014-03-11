@@ -69,6 +69,9 @@ a{
   text-decoration: none;
 }
 
+.small{
+  font-size: 60%;
+}
 
 #topbar{
   .container{
@@ -93,6 +96,9 @@ a{
       color: $jauneBeauval;
       margin: 0;
       font-weight: bold;
+      a{
+        color: inherit;
+      }
     }
   }
   .navs{
@@ -195,7 +201,6 @@ a{
         margin-left: 160px;
         .article-name{
           &,a{
-
             color: $blueBeauval;
           }
           margin-bottom: 5px;
@@ -272,6 +277,109 @@ a{
   }
 }
 
+.single-article{
+  #main{
+    min-height: 1000px;
+    #article{
+      background-color: #fff;
+      padding: 10px;
+      h3{
+        color: $blueBeauval;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid $blueBeauval;
+        font-weight: bold;
+      }
+      .article-picture{
+        img{
+          width: 150px;
+        }
+
+      }
+      .article-description{
+        padding: 10px 0 ;
+        text-align: justify;
+
+      }
+      .article-price{
+        padding: 10px 0;
+        p{
+          color: $blueBeauval;
+          font-size: 180%;
+          text-align: center;
+          font-weight: bold;
+        }
+      }
+      .article-stock{
+        padding: 10px 0;
+        p{
+          font-size: 140%;
+          text-align: center;
+          font-weight: bold;
+          &.success{
+            color: #29aa1e;
+          }
+          &.alert{
+            color: #ff5026;
+          }
+          &.warn{
+            color: #ffc050;
+          }
+        }
+      }
+      .article-quantity{
+        text-align: center;
+        padding: 20px 0;
+        #article-quantity-field{
+          display: inline-block;
+          padding: 4px;
+          vertical-align: middle;
+          border: 1px solid #ddd;
+          @include border-radius(3px);
+          max-width: 50px;
+          text-align: center;
+          line-height: 20px;
+          height: 28px;
+        }
+        .wrapper{
+          display: inline-block;
+          vertical-align: middle;
+        }
+        span.label{
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 20px;
+
+        }
+        a.article-plus, a.article-minus{
+          display: inline-block;
+          color: #aaa;
+          vertical-align: middle;
+          font-size: 20px;
+        }
+      }
+      .article-command{
+        text-align: center;
+        .btn{
+          color: $blueBeauval;
+          text-decoration: none;
+          outline: none;
+          padding: 8px 15px;
+          background-color: $jauneBeauval;
+          @include border-radius(5px);
+          font-weight: bold;
+          cursor: pointer;
+          display: inline-block;
+          vertical-align: middle;
+          &.disabled{
+            background-color: #aaa;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+}
 #footer{
   min-height: 250px;
   background-color: $blueBeauval;

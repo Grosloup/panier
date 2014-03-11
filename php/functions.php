@@ -15,6 +15,38 @@ function autoload($classname=""){
     require_once $filename;
 }
 
+function setEnv($env = "prod"){
+    define("ENVIRONEMENT", $env);
+    if($env == "prod"){
+        error_reporting(0);
+        ini_set("display_errors", "Off");
+        ini_set("display_startup_errors", "Off");
+    } else {
+        error_reporting(1);
+        ini_set("display_errors", 1);
+        ini_set("display_startup_errors", 1);
+        ini_set("xdebug.var_display_max_children", -1);
+        ini_set("xdebug.var_display_max_data", -1);
+        ini_set("xdebug.var_display_max_depth", -1);
+    }
+}
+
+function dump($datas){
+    if(defined("ENVIRONEMENT") && ENVIRONEMENT == "dev"){
+        var_dump($datas);
+    }
+}
+
+function camelToSnake($str){
+    return strtolower(preg_replace("/((?<=[a-z0-9])[A-Z]|(?<=[a-z])[0-9])/", "_$1", $str));
+}
+
+function snakeToCamel($str){
+    return ucfirst(preg_replace_callback("/((?<=[a-z0-9])_[a-z0-9])/",function($matches){
+        return strtoupper(str_replace("_","",$matches[0]));
+    }, $str));
+}
+
 function getHeader($datas = [], $filename = ""){
     if(!$filename){
         $filename = realpath(dirname(__DIR__)) . DS . "common" . DS . "header.php";

@@ -53,7 +53,7 @@ echo getHeader(["titre"=> "Bienvenue - ZooBeauvalBoutique"]);
                 <a href="http://www.zoobeauval.com"><img src="/img/logo.png" alt=""/></a>
             </div>
             <div class="title">
-                <h1>La Boutique</h1>
+                <h1><a href="<?php echo $router->getRoute("home"); ?>">La Boutique</a></h1>
             </div>
             <div class="navs">
                 <div class="nav-right">
@@ -120,7 +120,7 @@ echo getHeader(["titre"=> "Bienvenue - ZooBeauvalBoutique"]);
 </div>
 
 <div id="footer">
-    <?php var_dump($_SESSION); ?>
+    <?php dump($_SESSION); ?>
 </div>
 
 <script src="/js/vendor/jquery-1.11.0.min.js"></script>

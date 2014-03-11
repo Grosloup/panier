@@ -10,7 +10,7 @@
 <!-- start -->
 <div class="article" id="article-<?php echo $article->id; ?>">
     <div class="article-picture">
-        <img src="<?php echo $article->img ?>" alt=""/>
+        <img src="<?php echo $article->img ?>" alt="<?php echo $article->designation; ?>" title="<?php echo $article->designation; ?>"/>
     </div>
     <div class="article-details">
         <h3 class="article-name"><a href="<?php echo $router->getRoute("home_pages_article",["article_id"=>$article->id]); ?>"><?php echo $article->designation;?></a></h3>
