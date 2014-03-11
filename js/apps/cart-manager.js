@@ -153,7 +153,7 @@
             $.post(postUrl, {id:id,quantity: -1}, "json")
                 .done(function(data,status,xhr){
                     if(data.errorStatus == "ok"){
-                        rowAmount.text(initQuantity * uPrice);
+                        rowAmount.text((initQuantity * uPrice).toFixed(2));
                         amount.text(data.newAmount);
                         quantity.text(data.newQuantity);
                         overlay.removeClass("active");
@@ -161,7 +161,6 @@
                 });
         });
         updateRowAmount();
-        //console.log(this, plusBtn, minusBtn, display, uPrice, rowAmount, id, stock, initQuantity);
     });
 
 })(jQuery);

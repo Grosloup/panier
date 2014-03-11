@@ -108,5 +108,7 @@ echo getHeader(["titre"=> $article->designation . " - ZooBeauvalBoutique"]);
     <?php dump($_SESSION); ?>
 </div>
 <script src="/js/vendor/jquery-1.11.0.min.js"></script>
+<script src="/js/vendor/spin.min.js"></script>
+<script src="/js/vendor/jquery.spin.js"></script>
 <script src="/js/apps/cart-manager-single.js"></script>
 </body>

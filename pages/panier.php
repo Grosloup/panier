@@ -105,8 +105,5 @@ echo getHeader(["titre"=> "Votre panier - ZooBeauvalBoutique"]);
 <script src="/js/vendor/jquery-1.11.0.min.js"></script>
 <script src="/js/vendor/spin.min.js"></script>
 <script src="/js/vendor/jquery.spin.js"></script>
-<script>
-
-</script>
 <script src="/js/apps/cart-manager.js"></script>
 </body>
