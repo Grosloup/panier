@@ -165,4 +165,20 @@ a { text-decoration: none; }
 .single-article #main #article .article-command .btn { color: #2e85a3; text-decoration: none; outline: none; padding: 8px 15px; background-color: #ffd32f; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; font-weight: bold; cursor: pointer; display: inline-block; vertical-align: middle; }
 .single-article #main #article .article-command .btn.disabled { background-color: #aaa; cursor: default; }
 
+.cart #main { min-height: 1000px; }
+.cart #main #articles-list { padding: 10px; }
+.cart #main #articles-list .article { background-color: #fff; padding: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 4px; -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 4px; box-shadow: rgba(0, 0, 0, 0.1) 0 0 4px; margin-bottom: 10px; }
+.cart #main #articles-list .article:nth-child(2n+1) { background-color: #eff8fa; }
+.cart #main #articles-list .article .article-picture img { width: 75px; }
+.cart #main #articles-list .article .article-name { font-weight: bold; font-size: 90%; }
+.cart #main #articles-list .article .article-name, .cart #main #articles-list .article .article-name h6, .cart #main #articles-list .article .article-name a { color: #2e85a3; }
+.cart #main #articles-list .article .article-stock p { text-align: center; font-weight: bold; }
+.cart #main #articles-list .article .article-stock p.success { color: #29aa1e; }
+.cart #main #articles-list .article .article-stock p.alert { color: #ff5026; }
+.cart #main #articles-list .article .article-stock p.warn { color: #ffc050; }
+.cart #main #articles-list .article .article-price p { color: #2e85a3; text-align: center; font-weight: bold; }
+.cart #main #articles-list .article .article-quantity .article-quantity-field { display: inline-block; padding: 4px; vertical-align: middle; border: 1px solid #ddd; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; max-width: 50px; text-align: center; line-height: 20px; height: 28px; }
+.cart #main #articles-list .article .article-quantity a.article-plus, .cart #main #articles-list .article .article-quantity a.article-minus { display: inline-block; color: #aaa; vertical-align: middle; font-size: 20px; }
+.cart #main #articles-list .article .article-row-amount p { color: #2e85a3; text-align: center; font-weight: bold; }
+
 #footer { min-height: 250px; background-color: #2e85a3; -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 5px 5px inset; -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 5px 5px inset; box-shadow: rgba(0, 0, 0, 0.15) 0 5px 5px inset; padding: 10px 0 0 0; }

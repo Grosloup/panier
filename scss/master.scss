@@ -380,6 +380,92 @@ a{
     }
   }
 }
+.cart{
+  #main{
+    min-height: 1000px;
+    #articles-list{
+      padding: 10px;
+
+      .article{
+        background-color: #fff;
+        padding: 10px;
+        &:nth-child(2n+1){
+          background-color: lighten($blueBeauval, 55%);
+        }
+        @include box-shadow(rgba(0,0,0,0.1) 0 0 4px);
+        margin-bottom: 10px;
+        .article-picture{
+          img{
+            width: 75px;
+          }
+        }
+        .article-name{
+          &,h6,a{
+            color: $blueBeauval;
+          }
+          font-weight: bold;
+          font-size: 90%;
+        }
+        .article-stock{
+
+          p{
+            text-align: center;
+            font-weight: bold;
+            &.success{
+              color: #29aa1e;
+            }
+            &.alert{
+              color: #ff5026;
+            }
+            &.warn{
+              color: #ffc050;
+            }
+          }
+        }
+        .article-price{
+
+          p{
+            color: $blueBeauval;
+
+            text-align: center;
+            font-weight: bold;
+          }
+        }
+        .article-quantity{
+          .article-quantity-field{
+            display: inline-block;
+            padding: 4px;
+            vertical-align: middle;
+            border: 1px solid #ddd;
+            @include border-radius(3px);
+            max-width: 50px;
+            text-align: center;
+            line-height: 20px;
+            height: 28px;
+          }
+          a.article-plus, a.article-minus{
+            display: inline-block;
+            color: #aaa;
+            vertical-align: middle;
+            font-size: 20px;
+          }
+        }
+        .article-row-amount{
+          p{
+            color: $blueBeauval;
+
+            text-align: center;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
 #footer{
   min-height: 250px;
   background-color: $blueBeauval;

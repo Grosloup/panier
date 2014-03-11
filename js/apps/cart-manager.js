@@ -1,28 +1,28 @@
-/**
- * Created by Nicolas on 10/03/14.
- */
 ;(function($){
 
-    var cartBtn = $(".cart-btn").not(".disabled");
     var postUrl = "/php/add_to_cart.php";
     var cart = $("#panier");
     var amount = cart.find("#montant-total");
     var quantity = cart.find("#num-articles");
 
-    cartBtn.on("click", function(evt){
-        evt.preventDefault();
+    var articleQuantity = $(".article-quantity");
 
-        var id = $(this).data("articleId");
+    articleQuantity.each(function(){
+        var plusBtn = $(this).find(".article-plus");
+        var minusBtn = $(this).find(".article-minus");
+        var display = $(this).find(".article-quantity-field");
+        var uPrice = parseFloat($(this).data("articleUprice"));
+        var rowAmount = $(this).next(".article-row-amount").find("span.row-amount");
 
-        $.post(postUrl, {id: id}, "json")
-            .done(function(data,status,xhr){
-                if(data.errorStatus == "ok"){
-                    amount.text(data.newAmount);
-                    quantity.text(data.newQuantity);
-                }
-            });
+        function updateRowAmount(){
+            var total = uPrice * parseInt(display.val());
+            rowAmount.text(total);
+        }
+
+        updateRowAmount();
+
+        console.log(this, plusBtn, minusBtn, display, uPrice, rowAmount);
     });
-
-
+    console.log(articleQuantity);
 
 })(jQuery);
