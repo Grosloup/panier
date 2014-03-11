@@ -94,7 +94,11 @@ echo getHeader(["titre"=> $article->designation . " - ZooBeauvalBoutique"]);
                                 <?php
                                     $dataLimited = "data-article-limited='"  . $article->stock . "'";
                                 ?>
-                                <a class="btn" href="" data-article-id="<?php echo $article->id; ?>" <?php echo $dataLimited; ?>>Ajouter au panier</a>
+                                <?php if($article->stock>0): ?>
+                                    <a class="btn" href="" data-article-id="<?php echo $article->id; ?>" <?php echo $dataLimited; ?>>Ajouter au panier</a>
+                                <?php else: ?>
+
+                                <?php endif;?>
                             </div>
                         </div>
                     </div>
